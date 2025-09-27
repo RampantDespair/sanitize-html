@@ -16,11 +16,24 @@
   "license": "MIT",
   "author": "Apostrophe Technologies, Inc.",
   "sideEffects": false,
-  "main": "index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "index.js"
+    "dist"
   ],
   "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist",
     "test": "npx eslint . && mocha test/test.js"
   },
   "dependencies": {
@@ -32,6 +45,7 @@
     "postcss": "^8.3.11"
   },
   "devDependencies": {
+    "@types/node": "^24.5.2",
     "eslint": "^7.3.1",
     "eslint-config-apostrophe": "^3.4.0",
     "eslint-config-standard": "^14.1.1",
@@ -42,6 +56,9 @@
     "mocha": "^10.2.0",
     "prettier": "^3.6.2",
     "prettier-plugin-packagejson": "^2.5.19",
-    "sinon": "^9.0.2"
+    "rimraf": "^6.0.1",
+    "sinon": "^9.0.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2"
   }
 }
