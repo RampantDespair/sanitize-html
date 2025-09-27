@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node,turbo
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,turbo
+# Created by https://www.toptal.com/developers/gitignore/api/node
+# Edit at https://www.toptal.com/developers/gitignore?templates=node
 
 ### Node ###
 # Logs
@@ -141,8 +141,4 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-### Turbo ###
-# Turborepo task cache
-.turbo
-
-# End of https://www.toptal.com/developers/gitignore/api/node,turbo
+# End of https://www.toptal.com/developers/gitignore/api/node
