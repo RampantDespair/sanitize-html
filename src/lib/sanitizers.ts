@@ -514,21 +514,19 @@ export function sanitizeTagAttributeSetValue(
   const output: string[] = [];
 
   for (const [index, val] of input.entries()) {
-    if (!matchComparator(rule.values, val)) {
-      if (
-        !handleTagAttributeSetValueError(
-          attribute,
-          element,
-          index,
-          input,
-          rule,
-          errorHandling?.attributeSetValue,
-        )
-      ) {
-        return false;
-      }
-    } else {
+    if (matchComparator(rule.values, val)) {
       output.push(val);
+    } else if (
+      !handleTagAttributeSetValueError(
+        attribute,
+        element,
+        index,
+        input,
+        rule,
+        errorHandling?.attributeSetValue,
+      )
+    ) {
+      return false;
     }
   }
 

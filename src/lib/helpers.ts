@@ -85,7 +85,7 @@ export function unwrapInParent(
   }
 
   const next = element.nextSibling;
-  for (const child of [...element.children]) {
+  for (const child of element.children) {
     if (next) {
       adapter.insertBefore(parent, child, next);
     } else {
