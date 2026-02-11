@@ -38,7 +38,6 @@ export default defineConfig(
         ...globals.node,
       },
       parserOptions: {
-        project: true,
         projectService: true,
         tsconfigRootDir: process.cwd(),
       },
